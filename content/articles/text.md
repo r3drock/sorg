@@ -28,7 +28,7 @@ It was even worse than we'd thought -- we had at least hundreds of users (and ma
 
 We'd occasionally engage in active outreach campaigns to get users to change something, but it's a massive amount of work, and we have to offer generous deprecation timelines when we do. Given the nature of this problem and the number of users involved, it wasn't worth the effort. My dream of constraining most fields like customer or plan name to something reasonable like "only" 200 characters was a total non-starter.
 
-Instead, we ran the numbers, and came up with a best fit compromise that would leave the maximum numbers of users unaffected while still bounding fields text fields to something not completely crazy (the chosen number was 5000, as viewable in the [public OpenAPI spec](https://github.com/stripe/openapi)). And even the new very liberal limit was too long for a few users sending us giant payloads, so we gated them into an exemption.
+Instead, we ran the numbers, and came up with a best fit compromise that would leave the maximum numbers of users unaffected while still bounding fields text fields to something not completely crazy (the chosen number was 5000, as viewable in the [public OpenAPI spec](https://github.com/stripe/openapi)). And even the new very liberal limit was too short for a few users sending us giant payloads, so we gated them into an exemption.
 
 Let me briefly restate Hyrum's law:
 
